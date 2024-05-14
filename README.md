@@ -1,13 +1,24 @@
-# Sample Hardhat Project
+# Test NFT project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project demonstrates a basic nft project, using Hardhat. 
 
-Try running some of the following tasks:
+Make sure you have enough eth in your wallet on sepolia to actually deploy the contract...
+
+https://docs.pinata.cloud/pinning/pinning-files
+https://www.alchemy.com/faucets/ethereum-sepolia
+https://sepolia.etherscan.io/
+
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+# Show configuration that has been setup
+npx hardhat run scripts/showVars.js --network sepolia   
+# Deploy the image and metadata to ipfs ( you need create an account on Pinata.cloud )
+cd scripts; node runPinFileAndMetadata.js ../images/3.json
+# Test locally
+ npx hardhat ignition deploy ./ignition/modules/YellowKiss.js --network localhost
+ npx hardhat run scripts/mint.js --network localhost
+# Deploy contract to sepolia
+ npx hardhat ignition deploy ./ignition/modules/YellowKiss.js --network sepolia
+# Run the mint function on the deployed contract
+ npx hardhat run scripts/mint.js --network sepolia 
 ```
