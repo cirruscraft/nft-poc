@@ -4,9 +4,9 @@ This project demonstrates a basic nft project, using Hardhat.
 
 Make sure you have enough eth in your wallet on sepolia to actually deploy the contract...
 
-https://docs.pinata.cloud/pinning/pinning-files
-https://www.alchemy.com/faucets/ethereum-sepolia
-https://sepolia.etherscan.io/
+- [Pinata Cloud - IPFS storage] (https://docs.pinata.cloud/pinning/pinning-files)
+- [Get test ETH on Sepolia] (https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Etherscan] (https://sepolia.etherscan.io/)
 
 
 ```shell
